@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Studio Download handles data in its Chrome extension and macOS companion.">
+  <meta name="color-scheme" content="dark">
+  <title>Privacy policy | Studio Download</title>
+  <link rel="icon" href="./studio-download-icon.png" type="image/png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="./index.html">
+        <img class="brand-mark" src="./studio-download-icon.png" width="36" height="36" alt="">
+        <span>Studio Download</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./index.html">Home</a>
+        <a href="./privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="policy-main">
+    <article class="policy-shell">
+      <header>
+        <h1>Privacy policy</h1>
+        <p>This policy describes the Studio Download Chrome extension and its separately installed macOS companion.</p>
+      </header>
+
+      <section aria-labelledby="extension-data">
+        <h2 id="extension-data">Data used by the extension</h2>
+        <p>Studio Download reads the current YouTube watch URL, video ID, title, channel name and thumbnail to identify the video and display its download options. It stores recent download jobs and active jobs in Chrome's local extension storage. These records can include the selected video, format, quality, timestamps, job status and saved file name and path. Auto-Skip checks whether the current player offers a Skip button and uses its position briefly to activate it.</p>
+      </section>
+
+      <section aria-labelledby="companion">
+        <h2 id="companion">Downloads and the macOS companion</h2>
+        <p>The extension sends the selected video URL and download options to the companion on the same computer. The companion can also use the video ID to check for an existing local file. When you request a download, the companion contacts YouTube and its media and image services to retrieve the selected media and artwork. Those services receive normal network request information, such as your IP address, and handle it under their own policies. The extension and companion do not send your download history to a server operated by Studio Download.</p>
+        <p>To retrieve the selected media, the companion may fetch YouTube player JavaScript and process its playback challenge logic locally through yt-dlp and an installed JavaScript runtime.</p>
+      </section>
+
+      <section aria-labelledby="use">
+        <h2 id="use">How Studio Download uses data</h2>
+        <p>The extension does not request your YouTube password, read your sign-in cookies, or monitor browsing outside the supported YouTube pages. Studio Download does not sell user data or use it for advertising, profiling or credit decisions.</p>
+        <p>Studio Download’s use of information received from Chrome APIs follows the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">Chrome Web Store Limited Use requirements</a>.</p>
+      </section>
+
+      <section aria-labelledby="removal">
+        <h2 id="removal">Data retention and removal</h2>
+        <p>Uninstalling the extension clears its local Chrome storage. Files saved in the Desktop/mp3 and Desktop/mp4 folders, including the companion's local saved-file indexes, stay on your computer until you remove them. Uninstalling the extension does not uninstall the companion.</p>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
+        <p>For privacy questions, use the support contact listed on the Studio Download Chrome Web Store page.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="nav-shell">
+      <span>Studio Download</span>
+      <a href="./privacy.html" aria-current="page">Privacy policy</a>
+    </div>
+  </footer>
+</body>
+</html>

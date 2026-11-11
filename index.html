@@ -3,107 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How Studio Download handles data in its Chrome extension and macOS companion.">
-  <meta name="color-scheme" content="dark">
-  <title>Studio Download Privacy Policy</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      font-family: Inter, system-ui, sans-serif;
-      background: #121612;
-      color: #f0f4ed;
-    }
-
-    body {
-      margin: 0;
-      background: radial-gradient(ellipse at top, #21301b 0%, transparent 35rem);
-      min-height: 100vh;
-    }
-
-    main {
-      max-width: 44rem;
-      margin-inline: auto;
-      padding: clamp(3rem, 9vw, 6.5rem) clamp(1.25rem, 5vw, 3rem) 4rem;
-    }
-
-    header {
-      padding-bottom: 1.75rem;
-      border-bottom: 1px solid #3c4938;
-    }
-
-    .brand {
-      margin: 0 0 0.65rem;
-      color: #b5e78f;
-      font-size: 0.875rem;
-      font-weight: 650;
-      letter-spacing: 0.07em;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.5rem, 8vw, 4rem);
-      letter-spacing: -0.045em;
-      line-height: 1.05;
-    }
-
-    h2 {
-      margin: 0 0 0.65rem;
-      font-size: 1.2rem;
-      line-height: 1.3;
-    }
-
-    p {
-      margin: 0.8rem 0 0;
-      color: #d2dacf;
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    section {
-      margin-top: 2rem;
-    }
-
-    @media print {
-      :root, body { background: #fff; color: #111; }
-      main { padding: 0; }
-      .brand, p { color: #222; }
-    }
-  </style>
+  <meta name="description" content="Studio Download adds MP3, MP4 and Auto-Skip controls to YouTube. Learn how it works, what it requires and how it handles your data.">
+  <meta name="theme-color" content="#101411">
+  <link rel="icon" href="./studio-download-icon.png" type="image/png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./live-text.js" defer></script>
+  <title>Studio Download · Audio & Video</title>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="brand">Studio Download</p>
-      <h1>Privacy policy</h1>
-      <p>This policy describes the Studio Download Chrome extension and its separately installed macOS companion.</p>
-    </header>
-
-    <section aria-labelledby="extension-data">
-      <h2 id="extension-data">Data used by the extension</h2>
-      <p>Studio Download reads the current YouTube watch URL, video ID, title, channel name and thumbnail to identify the video and display its download options. It stores recent download jobs and active jobs in Chrome's local extension storage. These records can include the selected video, format, quality, timestamps, job status and saved file name and path. Auto-Skip checks whether the current player offers a Skip button and uses its position briefly to activate it.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="./"><img class="brand-mark" src="./studio-download-icon.png" width="36" height="36" alt=""><span>Studio <strong>Download</strong></span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="./privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Chrome extension</p>
+        <h1 id="hero-title">Studio<br>Download<span>.</span></h1>
+        <div class="live-line">
+          <span class="sr-only">Save MP3 audio, save MP4 video, or skip eligible ads.</span>
+          <span id="live-text" aria-hidden="true">Save MP3 audio.</span>
+          <button id="motion-toggle" class="motion-toggle" type="button" hidden aria-label="Pause animated text" title="Pause animated text">Ⅱ</button>
+        </div>
+        <p class="intro">Choose an audio or video format right on the YouTube watch page. The macOS companion saves your files to your Desktop.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#how-it-works">How it works <span aria-hidden="true">↘</span></a>
+          <a class="button button-secondary" href="./privacy.html">Privacy policy</a>
+        </div>
+      </div>
+      <figure class="preview">
+        <div class="preview-image"><img src="./studio-download-preview.jpg" width="1280" height="800" alt="Studio Download popup showing MP3 with cover art and MP4 choices from 360p to 1080p for a demo video."></div>
+        <figcaption><span></span> Extension preview with demo media</figcaption>
+      </figure>
     </section>
-
-    <section aria-labelledby="companion">
-      <h2 id="companion">Downloads and the macOS companion</h2>
-      <p>The extension sends the selected video URL and download options to the companion on the same computer. The companion can also use the video ID to check for an existing local file. When you request a download, the companion contacts YouTube and its media and image services to retrieve the selected media and artwork. Those services receive normal network request information, such as your IP address, and handle it under their own policies. The extension and companion do not send your download history to a server operated by Studio Download.</p>
-      <p>To retrieve the selected media, the companion may fetch YouTube player JavaScript and process its playback challenge logic locally through yt-dlp and an installed JavaScript runtime.</p>
+    <section class="section shell" id="features" aria-labelledby="features-title">
+      <h2 id="features-title">What you can do</h2>
+      <div class="features">
+        <article class="card"><span class="tag">MP3</span><h3>Save the audio</h3><p>Export MP3 audio at up to 320 kbps with cover art when available.</p></article>
+        <article class="card"><span class="tag">MP4</span><h3>Choose video quality</h3><p>Choose 360p, 480p, 720p, or up to 1080p. The result depends on the source quality.</p></article>
+        <article class="card"><span class="tag">Skip</span><h3>Skip eligible ads</h3><p>Auto-Skip uses YouTube’s Skip button when it appears on the active video.</p></article>
+      </div>
     </section>
-
-    <section aria-labelledby="use">
-      <h2 id="use">How Studio Download uses data</h2>
-      <p>The extension does not request your YouTube password, read your sign-in cookies, or monitor browsing outside the supported YouTube pages. Studio Download does not sell user data or use it for advertising, profiling or credit decisions.</p>
-      <p>Studio Download’s use of information received from Chrome APIs follows the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">Chrome Web Store Limited Use requirements</a>.</p>
+    <section class="section shell" id="how-it-works" aria-labelledby="steps-title">
+      <div class="steps-card">
+        <div><p class="eyebrow">Setup</p><h2 id="steps-title">How it works</h2><p>Downloads need the separate macOS companion. Save media you own or have permission to download.</p></div>
+        <ol class="steps">
+          <li><div><strong>Open a YouTube video</strong><p>Open Studio Download from the toolbar or use its controls below the video.</p></div></li>
+          <li><div><strong>Choose MP3 or MP4</strong><p>For MP4, choose your preferred resolution. You can follow active and recent jobs in the popup.</p></div></li>
+          <li><div><strong>Find the finished file</strong><p>The companion saves files in <code>Desktop/mp3</code> or <code>Desktop/mp4</code>. The popup can reveal the file when it’s ready.</p></div></li>
+        </ol>
+      </div>
     </section>
-
-    <section aria-labelledby="removal">
-      <h2 id="removal">Data retention and removal</h2>
-      <p>Uninstalling the extension clears its local Chrome storage. Files saved in the Desktop/mp3 and Desktop/mp4 folders, including the companion's local saved-file indexes, stay on your computer until you remove them. Uninstalling the extension does not uninstall the companion.</p>
-    </section>
-
-    <section aria-labelledby="contact">
-      <h2 id="contact">Contact</h2>
-      <p>For privacy questions, use the support contact listed on the Studio Download Chrome Web Store page.</p>
+    <section class="section shell faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Common questions</h2>
+      <div>
+        <details><summary>What do I need to save files?</summary><p>Use Chrome and install the Studio Download macOS companion separately. The companion performs the download and conversion.</p></details>
+        <details><summary>Does Auto-Skip skip every ad?</summary><p>It works when YouTube shows a usable Skip button. Ads without one can still play.</p></details>
+        <details><summary>What data does the extension use?</summary><p>It reads details about the current YouTube video and stores recent jobs locally. The companion contacts YouTube’s media services when you request a download. <a href="./privacy.html">Read the full privacy policy</a>.</p></details>
+      </div>
     </section>
   </main>
+  <footer class="site-footer"><div class="nav-shell"><span>Studio Download</span><a href="./privacy.html">Privacy policy</a></div></footer>
 </body>
 </html>
